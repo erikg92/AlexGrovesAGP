@@ -8,12 +8,23 @@
 HINSTANCE g_hInst = NULL;
 HWND g_hWnd = NULL;
 // Rename for each tutorial
-char g_TutorialName[100] = "Tutorial 01 Exercise 01\0";
+char g_TutorialName[100] = "Tutorial 01 Exercise 02\0";
+
+
+D3D_DRIVER_TYPE g_driverType = D3D_DRIVER_TYPE_NULL;
+D3D_FEATURE_LEVEL g_featureLevel = D3D_FEATURE_LEVEL_11_0;
+ID3D11Device* g_pD3DDevice = NULL;
+ID3D11DeviceContext* g_pImmediateContext = NULL;
+IDXGISwapChain* g_pSwapChain = NULL;
 //////////////////////////////////////////////////////////////////////////////////////
 // Forward declarations
 //////////////////////////////////////////////////////////////////////////////////////
 HRESULT InitialiseWindow(HINSTANCE hInstance, int nCmdShow);
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
+
+HRESULT InitialiseD3D();
+void ShutdownD3D();
+
 //////////////////////////////////////////////////////////////////////////////////////
 // Entry point to the program. Initializes everything and goes into a message processing
 // loop. Idle time is used to render the scene.
@@ -27,6 +38,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//DXTRACE_MSG("Failed to create Window");
 		return 0;
 	}
+
+	if (FAILED(InitialiseD3D()))
+	{
+		//DXTRACE_MSG("Failed to create Device");
+		return 0;
+	}
+
 	// Main message loop
 	MSG msg = { 0 };
 	while (msg.message != WM_QUIT)
@@ -41,8 +59,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			
 				// do something
 		}
+
 	}
+
+	ShutdownD3D();
+
 	return (int)msg.wParam;
+
 }
 //////////////////////////////////////////////////////////////////////////////////////
 // Register class and create window
@@ -97,4 +120,70 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		return DefWindowProc(hWnd, message, wParam, lParam);
 	}
 	return 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Create D3D device and swap chain
+//////////////////////////////////////////////////////////////////////////////////////
+HRESULT InitialiseD3D()
+{
+	HRESULT hr = S_OK;
+	RECT rc;
+	GetClientRect(g_hWnd, &rc);
+	UINT width = rc.right - rc.left;
+	UINT height = rc.bottom - rc.top;
+	UINT createDeviceFlags = 0;
+#ifdef _DEBUG
+	createDeviceFlags |= D3D11_CREATE_DEVICE_DEBUG;
+#endif
+	D3D_DRIVER_TYPE driverTypes[] =
+	{
+		D3D_DRIVER_TYPE_HARDWARE, // comment out this line if you need to test D3D 11.0functionality on hardware that doesn't support it
+		D3D_DRIVER_TYPE_WARP, // comment this out also to use reference device
+		D3D_DRIVER_TYPE_REFERENCE,
+	};
+	UINT numDriverTypes = ARRAYSIZE(driverTypes);
+	
+		D3D_FEATURE_LEVEL featureLevels[] =
+	{
+		D3D_FEATURE_LEVEL_11_0,
+		D3D_FEATURE_LEVEL_10_1,
+		D3D_FEATURE_LEVEL_10_0,
+	};
+	UINT numFeatureLevels = ARRAYSIZE(featureLevels);
+	DXGI_SWAP_CHAIN_DESC sd;
+	ZeroMemory(&sd, sizeof(sd));
+	sd.BufferCount = 1;
+	sd.BufferDesc.Width = width;
+	sd.BufferDesc.Height = height;
+	sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+	sd.BufferDesc.RefreshRate.Numerator = 60;
+	sd.BufferDesc.RefreshRate.Denominator = 1;
+	sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+	sd.OutputWindow = g_hWnd;
+	sd.SampleDesc.Count = 1;
+	sd.SampleDesc.Quality = 0;
+	sd.Windowed = true;
+	for (UINT driverTypeIndex = 0; driverTypeIndex < numDriverTypes; driverTypeIndex++)
+	{
+		g_driverType = driverTypes[driverTypeIndex];
+		hr = D3D11CreateDeviceAndSwapChain(NULL, g_driverType, NULL,
+			createDeviceFlags, featureLevels, numFeatureLevels,
+			D3D11_SDK_VERSION, &sd, &g_pSwapChain,
+			&g_pD3DDevice, &g_featureLevel, &g_pImmediateContext);
+		if (SUCCEEDED(hr))
+			break;
+	}
+	if (FAILED(hr))
+		return hr;
+	return S_OK;
+}
+//////////////////////////////////////////////////////////////////////////////////////
+// Clean up D3D objects
+//////////////////////////////////////////////////////////////////////////////////////
+void ShutdownD3D()
+{
+	if (g_pSwapChain) g_pSwapChain->Release();
+	if (g_pImmediateContext) g_pImmediateContext->Release();
+	if (g_pD3DDevice) g_pD3DDevice->Release();
 }
