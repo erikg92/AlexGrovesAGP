@@ -1,61 +1,9 @@
-﻿  main.cpp
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50092): note: see previous definition of 'DXGI_STATUS_OCCLUDED'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50101): note: see previous definition of 'DXGI_STATUS_CLIPPED'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50110): note: see previous definition of 'DXGI_STATUS_NO_REDIRECTION'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50119): note: see previous definition of 'DXGI_STATUS_NO_DESKTOP_ACCESS'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50128): note: see previous definition of 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50137): note: see previous definition of 'DXGI_STATUS_MODE_CHANGED'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50146): note: see previous definition of 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50161): note: see previous definition of 'DXGI_ERROR_INVALID_CALL'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50170): note: see previous definition of 'DXGI_ERROR_NOT_FOUND'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50179): note: see previous definition of 'DXGI_ERROR_MORE_DATA'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50188): note: see previous definition of 'DXGI_ERROR_UNSUPPORTED'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50197): note: see previous definition of 'DXGI_ERROR_DEVICE_REMOVED'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50206): note: see previous definition of 'DXGI_ERROR_DEVICE_HUNG'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50216): note: see previous definition of 'DXGI_ERROR_DEVICE_RESET'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50225): note: see previous definition of 'DXGI_ERROR_WAS_STILL_DRAWING'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50235): note: see previous definition of 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50244): note: see previous definition of 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50254): note: see previous definition of 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50263): note: see previous definition of 'DXGI_ERROR_NONEXCLUSIVE'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50272): note: see previous definition of 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50282): note: see previous definition of 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50291): note: see previous definition of 'DXGI_ERROR_REMOTE_OUTOFMEMORY'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50469): note: see previous definition of 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50478): note: see previous definition of 'D3D11_ERROR_FILE_NOT_FOUND'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50488): note: see previous definition of 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50497): note: see previous definition of 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50445): note: see previous definition of 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
-d:\downloads 2.0\vs2015.com_enu (1)\directx\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': macro redefinition
-  c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50454): note: see previous definition of 'D3D10_ERROR_FILE_NOT_FOUND'
-f:\year 3\agp\agp unit\main.cpp(201): warning C4244: '=': conversion from 'UINT' to 'FLOAT', possible loss of data
-f:\year 3\agp\agp unit\main.cpp(202): warning C4244: '=': conversion from 'UINT' to 'FLOAT', possible loss of data
-  AGP Unit.vcxproj -> F:\Year 3\AGP\AGP Unit\Debug\AGP Unit.exe
-  AGP Unit.vcxproj -> F:\Year 3\AGP\AGP Unit\Debug\AGP Unit.pdb (Full PDB)
+﻿Build started 11/10/2016 12:30:17.
+     1>Project "E:\Year 3\AGP\AGP Unit\AGP Unit.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         AGP Unit.vcxproj -> E:\Year 3\AGP\AGP Unit\Debug\AGP Unit.exe
+     1>Done Building Project "E:\Year 3\AGP\AGP Unit\AGP Unit.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.28
